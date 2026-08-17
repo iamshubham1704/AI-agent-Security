@@ -1,0 +1,15 @@
+.venv/
+__pycache__/
+*.pyc
+.aicomp/
+.hf_cache/
+*.gguf
+.claude/settings.local.json
+
+# Vendored competition SDK/harness (pip-installed / downloaded from Kaggle,
+# not our own work - also full of fake-looking fixture "secrets" that trip
+# GitHub push protection). Reinstall with: pip install aicomp-sdk
+/aicomp_sdk/
+/aicomp_sdk-3.1.2.dist-info/
+/kaggle_evaluation/
+/__init__.py
