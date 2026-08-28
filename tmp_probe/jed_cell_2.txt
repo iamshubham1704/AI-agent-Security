@@ -1,0 +1,5 @@
+import kaggle_evaluation.jed_attack_134815.jed_attack_inference_server
+# The visible "Save & Run All" only verifies your notebook runs without errors.
+# Real scoring happens during Kaggle's competition rerun.
+server = kaggle_evaluation.jed_attack_134815.jed_attack_inference_server
+server.JEDAttackInferenceServer().serve()

@@ -1,0 +1,16 @@
+import sys, os, glob
+from pathlib import Path
+
+# Prevent argparse conflicts in Kaggle notebooks
+sys.argv = [sys.argv[0]]
+
+# Add the competition data to the import path
+# The competition dataset contains kaggle_evaluation/ and aicomp_sdk/ at its root
+for candidate in glob.glob('/kaggle/input/**/kaggle_evaluation', recursive=True):
+    dataset_root = str(Path(candidate).parent)
+    if dataset_root not in sys.path:
+        sys.path.insert(0, dataset_root)
+    print(f'Dataset root: {dataset_root}')
+    break
+
+print('Setup complete ✅')
